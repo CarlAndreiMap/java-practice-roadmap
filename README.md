@@ -58,7 +58,7 @@ Projects don't have to perfectly fit one phase — the point is the general tren
 | # | Project | Phase | Status | Concepts Covered | Date Completed |
 |---|---|---|---|---|---|
 | 01 | *Grade & Report Card Generator* | 1 - Warm-up | ✅ Completed |Loops, conditionals, Scanner, input validation, exception handling, methods, running calculations without arrays, String accumulation, printf/String.format formatting |2026-09-01|
-| 02 | *(not started)* | 1 - Warm-up | 🟡 In Progress | | |
+| 02 | *Number & Pattern Analyzer* | 1 - Warm-up | 🟡 In Progress | | |
 
 **Status key:** 🔲 Not Started · 🟡 In Progress · ✅ Completed · ⏸ Paused
 
