@@ -5,6 +5,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int startNum = 0;
         int endNum = 0;
+        int primeCount = 0;
+        int perfectSquareCount = 0;
+        int ascendingCount = 0;
         // Input & Validation
         while (true) {
             try {
@@ -23,9 +26,72 @@ public class Main {
                 scanner.next();
             }
         }
+        scanner.close();
         
-        System.out.println("\nAnalyzing numbers from " + startNum + " to " + endNum + "...\n");
+        System.out.println("\nAnalyzing numbers from " + startNum + " to " + endNum + "...\n"); 
         
 
+        for (int i = startNum; i <= endNum; i++) {
+            boolean prime = primeCheck(i);
+            boolean perfectSquare = perfectSquareCheck(i);
+            boolean ascendingOrder = ascendingCheck(i);
+            if (prime) {
+                primeCount++;
+                System.out.println(i + " -> Prime");
+            } else if (perfectSquare) {
+                perfectSquareCount++;
+                System.out.println(i + " -> Perfect square");
+            }
+
+            if (ascendingOrder) {
+                ascendingCount++;
+                System.out.println(i + " -> Ascending digits");
+            }
+        }
+        System.out.println("Summary:\nPrimes found: " + primeCount);
+
+    }
+
+    // Method to check if number is a prime.
+    public static Boolean primeCheck(int number) {
+        boolean isPrime = false;
+        if (number > 1) {
+            int prime = (int) Math.floor(Math.sqrt(number));
+            for (int i = 2; i <= prime; i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+                isPrime = true;
+            }
+        }
+        return isPrime;
+    }
+
+    // Perfect Square Check
+    public static Boolean perfectSquareCheck(int number) {
+        int root = (int) Math.round(Math.sqrt(number));
+        boolean isPerfectSquare = (root * root == number);
+        return isPerfectSquare;
+    }
+
+    public static Boolean ascendingCheck(int number) {
+        boolean isAscending = false;
+        int previousNum = Integer.MAX_VALUE;
+        for (int i = number; i != 0;) {
+            int num = i % 10;
+            if (num < previousNum) {
+                previousNum = num;
+                i = i / 10;
+                continue;
+            } else {
+                isAscending = false;
+                break;
+            }
+            
+        }
+        isAscending = true;
+        
+        return isAscending;
     }
 }
