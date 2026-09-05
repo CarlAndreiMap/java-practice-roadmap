@@ -75,23 +75,20 @@ public class Main {
         return isPerfectSquare;
     }
 
-    public static Boolean ascendingCheck(int number) {
-        boolean isAscending = false;
-        int previousNum = Integer.MAX_VALUE;
-        for (int i = number; i != 0;) {
-            int num = i % 10;
-            if (num < previousNum) {
-                previousNum = num;
-                i = i / 10;
-                continue;
-            } else {
-                isAscending = false;
-                break;
-            }
-            
+    public static boolean ascendingCheck(int number) {
+    if (number < 0) {
+        number = -number; // handle negatives by checking magnitude
+    }
+    int previousDigit = Integer.MAX_VALUE;
+    while (number != 0) {
+        int currentDigit = number % 10;
+        if (currentDigit < previousDigit) {
+            previousDigit = currentDigit;
+            number = number / 10;
+        } else {
+            return false;
         }
-        isAscending = true;
-        
-        return isAscending;
+    }
+    return true;
     }
 }
