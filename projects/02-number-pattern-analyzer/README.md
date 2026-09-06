@@ -2,11 +2,11 @@
 
 **Phase:** 1 - Warm-up 
 
-**Status:** 🟡 In Progress
+**Status:** ✅ Completed
 
 **Date Started:** 2026-09-03
 
-**Date Completed:** 
+**Date Completed:** 2026-09-06
 
 ## Goal
 
@@ -36,8 +36,4 @@ I'll probably have to create specific methods in order to verify the numbers. I'
 
 ## What I Learned / Struggled With
 
- 
-
-## Optional Challenges
-
-<Add extra stretch goals here once the main requirements are done, if you want to push further.>
+ Okay this one I struggled with a lot trying to figure out the proper checks for the numbers, and most of the code in the methods are super unnecessary, there is a lot of repetitive codes aswell but I still lack the knowledge to figure out the best way. 
