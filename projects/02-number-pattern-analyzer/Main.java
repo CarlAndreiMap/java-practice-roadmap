@@ -35,12 +35,31 @@ public class Main {
             boolean prime = primeCheck(i);
             boolean perfectSquare = perfectSquareCheck(i);
             boolean ascendingOrder = ascendingCheck(i);
+
             if (prime) {
-                primeCount++;
-                System.out.println(i + " -> Prime");
-            } else if (perfectSquare) {
-                perfectSquareCount++;
-                System.out.println(i + " -> Perfect square");
+                if (ascendingOrder) {
+                    primeCount++;
+                    ascendingCount++;
+                    System.out.println(i + " -> Prime, Ascending digits");
+                    continue;
+                } else {
+                    primeCount++;
+                    System.out.println(i + " -> Prime");
+                    continue;
+                }
+            }
+            //  
+            if (perfectSquare) { // nested if to check both conditions
+                if (ascendingOrder) {
+                    perfectSquareCount++;
+                    ascendingCount++;
+                    System.out.println(i + " -> Perfect square, Ascending digits");
+                    continue;
+                } else {
+                    perfectSquareCount++;
+                    System.out.println(i + " -> Perfect square");
+                    continue;
+                }
             }
 
             if (ascendingOrder) {
@@ -48,9 +67,12 @@ public class Main {
                 System.out.println(i + " -> Ascending digits");
             }
         }
-        System.out.println("Summary:\nPrimes found: " + primeCount);
-
-    }
+        int totalNum = (endNum - (startNum - 1));
+        System.out.println("\nSummary:\nTotal numbers checked: " + totalNum );
+        System.out.println("Primes found: " + primeCount);
+        System.out.println("Perfect squares found: " + perfectSquareCount);
+        System.out.println("Ascending-digit numbers found: " + ascendingCount);
+    }   
 
     // Method to check if number is a prime.
     public static Boolean primeCheck(int number) {
