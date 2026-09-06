@@ -41,3 +41,17 @@ Newest entries at the top.
 
 **AI (Claude) Rating:** Readability: 8/10. Clear variable names, Structure/efficiency: 8/10. Good method extraction, Correctness/robustness: 8/10. You caught and fixed the bug.
 
+---
+### 2026-09-06 — Project 02: Number & Pattern Analyzer
+
+**Worked on:** Number & Pattern Analyzer — validated a numeric range, checked each number for primality, perfect-square status, and ascending digits, then printed matches and a summary.
+
+**Went well:** Correctly identified and fixed the stale-variable bug in ascendingCheck (comparing against a frozen i instead of the shrinking number) after tracing execution by hand. Method extraction into primeCheck, perfectSquareCheck, and ascendingCheck was clean from the start.
+
+**Struggled with:** Understanding why digits extracted with % 10 come out right-to-left, and how that flips the comparison logic needed to detect "ascending" order. Also missed an edge case in primeCheck where Math.floor(Math.sqrt(n)) caused 2 and 3 to be misclassified as not prime.
+
+**To revisit:** Floating-point pitfalls with Math.sqrt (rounding vs. truncation, verify-by-squaring pattern), and the i * i <= number approach as a safer alternative to sqrt-based loop bounds.
+
+**AI (Claude) Rating:** Readability: 7/10, Structure/efficiency: 6/10, Correctness/robustness: after review — one bug found (2/3 misclassified as non-prime), rest of logic including input validation and ascending check was correct.
+
+---
