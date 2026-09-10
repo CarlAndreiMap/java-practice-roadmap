@@ -53,13 +53,18 @@ public class Main {
         String highestScoreStudent = "";
         String lowestScoreStudent = "";
         for (int i = 0; i < studentScores.length; i++) {
-        
-            if (studentScores[i] >= highestScore) {
+            if (studentScores[i] == highestScore) {
+                highestScoreStudent += ", " + studentNames[i];
+            }
+
+            if (studentScores[i] > highestScore) {
                 highestScore = studentScores[i];
                 highestScoreStudent = studentNames[i];
             }
-            
-            if (studentScores[i] <= lowestScore) {
+            if (studentScores[i] == lowestScore) {
+                lowestScoreStudent += ", " + studentNames[i];
+            }
+            if (studentScores[i] < lowestScore) {
                 lowestScore = studentScores[i];
                 lowestScoreStudent = studentNames[i];
             }
@@ -89,15 +94,13 @@ public class Main {
         System.out.printf("%-15s %1.2f%n", "Average score:", averageStudentScores);
         System.out.printf("%-15s %1d (%1s)%n", "Highest score:", highestScore, highestScoreStudent);
         System.out.printf("%-15s %1d (%1s)%n", "Lowest score:", lowestScore, lowestScoreStudent);
-        System.out.printf("Passed: %1d%n", totalPassed);
-        System.out.printf("Failed: %1d", totalFailed);
+        System.out.printf("Passed: %d%n", totalPassed);
+        System.out.printf("Failed: %d", totalFailed);
+        
+        scanner.close();
     }   
     
    public static Boolean studentPassed(int number) {
-        if (number >= 75) {
-            return true;
-        } else {
-            return false;
-        }
+        return number >= 75;
    }
 }
