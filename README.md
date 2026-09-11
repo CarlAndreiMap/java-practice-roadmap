@@ -59,7 +59,7 @@ Projects don't have to perfectly fit one phase — the point is the general tren
 |---|---|---|---|---|---|
 | 01 | *Grade & Report Card Generator* | 1 - Warm-up | ✅ Completed |Loops, conditionals, Scanner, input validation, exception handling, methods, running calculations without arrays, String accumulation, printf/String.format formatting |2026-09-01|
 | 02 | *Number & Pattern Analyzer* | 1 - Warm-up | ✅ Completed |Core control flow, Conditionals & boolean logic, Methods, Math & number manipulation, Input handling & exceptions, Debugging & tracing skills |2026-09-06|
-| 03 | *Student Score Tracker* | 2 - Combining Basics | ⏸ Paused |Declaring, filling, and iterating over arrays, Parallel arrays, Array bounds and off-by-one awareness, Basic sorting algorithm | |
+| 03 | *Student Score Tracker* | 2 - Combining Basics | 🟡 In Progress |Declaring, filling, and iterating over arrays, Parallel arrays, Array bounds and off-by-one awareness, Basic sorting algorithm | |
 
 **Status key:** 🔲 Not Started · 🟡 In Progress · ✅ Completed · ⏸ Paused
 
